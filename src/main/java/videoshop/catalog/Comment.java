@@ -41,17 +41,19 @@ public class Comment implements Serializable {
 
 	private String text;
 	private int rating;
+	private String userName;
 
 	private LocalDateTime date;
 
 	@SuppressWarnings("unused")
 	private Comment() {}
 
-	public Comment(String text, int rating, LocalDateTime dateTime) {
+	public Comment(String text, int rating, String userName, LocalDateTime dateTime) {
 
 		this.text = text;
 		this.rating = rating;
 		this.date = dateTime;
+		this.userName = userName;
 	}
 
 	public long getId() {
@@ -68,6 +70,10 @@ public class Comment implements Serializable {
 
 	public int getRating() {
 		return rating;
+	}
+
+	public String getUserName(){
+		return userName;
 	}
 
 	/*

@@ -49,6 +49,7 @@
                                 <span th:text="${comment.rating}">5</span>
                             </div>
                         </div>
+                        <div class="name" th:text="${comment.name}">UserName</div>
                         <div class="text" th:text="${comment.text}">Guter Film vong Inhalt her</div>
                     </div>
                 </div>
@@ -57,6 +58,10 @@
                     <p class="ui negative message" th:if="${#fields.hasErrors('*')}">
                         Einige Angaben sind nicht korrekt.
                     </p>
+                    <div class="field" th:classappend="${#fields.hasErrors('name')} ? 'error' : ''">
+                        <label th:text="#{detail.comment.addName}" for="name">Name</label>
+                        <textarea id="name" name="name" th:field="*{name}" cols="2" rows="1" required="required"></textarea><br/>
+                    </div>
                     <div class="field" th:classappend="${#fields.hasErrors('comment')} ? 'error' : ''">
                         <label th:text="#{detail.comment.addComment}" for="comment">Kommentieren</label>
                         <textarea id="comment" name="comment" th:field="*{comment}" cols="40" rows="5" required="required"></textarea><br/>

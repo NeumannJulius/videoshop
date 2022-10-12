@@ -24,6 +24,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
+
 /**
  * The central application class to configure the Spring container and run the application.
  *
